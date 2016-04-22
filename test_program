@@ -1,0 +1,76 @@
+#!/usr/bin/env python
+#-*-coding:utf-8-*-
+#coding:utf-8
+"""
+author by wanglei
+Created on April 21, 2016
+"""
+print __name__
+print __file__
+print __doc__
+
+
+"""
+def show(*args): #将参数以列表形式传入函数中
+    for item in args:
+        print item
+
+
+if __name__ == '__main__':
+    show('wl','zc',123,('w',5))
+"""
+
+"""
+def show(**args):  #将参数以字典形式传入函数中
+    for i in args.items():
+        print i
+
+
+if __name__ == '__main__':
+    show(name='wl',age='zc',scort=123)
+    dict={'k':1,'k1':2}
+    show(**dict)  #传字典变量时，变量前也得加**
+"""
+
+
+#生成器　xrange,xreadlines
+
+def foo():
+    yield 1
+    yield 2
+    yield 3
+    yield 4
+
+re=foo()
+print re
+for i in re:
+    print i
+
+
+"""
+def readlines():#xreadlines实现方式
+    seek = 0
+    while True:
+        with open('D:\google.txt','r') as f: #with自动关闭文件
+            f.seek(seek)
+            data = f.readline()
+            print data
+            if data:
+                seek = f.tell()
+                yield data
+            else:
+                return
+
+for i in readlines():
+    print i,
+"""
+
+
+result = 'gt' if 1 > 3 else 'lt'  #三元运算
+print result
+
+temp = lambda x,y:x**y  #lambda函数（匿名函数）
+print temp(1,2)
+print [x*2 for x in range(10)]
+print map(lambda x:x**2,range(10))
+
