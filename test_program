@@ -74,3 +74,5 @@ print temp(1,2)
 print [x*2 for x in range(10)]
 print map(lambda x:x**2,range(10))
 
+for i,j in enumerate([1,2,3,4],1):  #enumerate生成一个key,逗号后为从几开始
+    print i,j
